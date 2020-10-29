@@ -63,9 +63,10 @@ export async function getStaticProps(){
     }
 }
 function HomePage ({data}) {
+    console.log(data.page.assets.responsiveImage)
 return (<div>
     <section>
-        <Image data={data.page.assets.responsiveImage}/>
+        {/* <Image data={data.page.assets.responsiveImage}/> */}
     </section>
 </div>)
 }
