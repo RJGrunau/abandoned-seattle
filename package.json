@@ -1,0 +1,18 @@
+{
+  "name": "abandoned-seattle",
+  "version": "1.0.0",
+  "description": "Site for photography project documenting abandoned buildings in Seattle, Wa",
+  "main": "index.js",
+  "author": "Robert J Grunau",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}
