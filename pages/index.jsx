@@ -63,20 +63,22 @@ export async function getStaticProps(){
     }
 }
 function HomePage ({data}) {
-    console.log(data)
-return (<div>
-    <section>
-        <h1>{data.page.title}</h1>
-        {/* <Image data={data.page.assets.responsiveImage}/> */}
-    </section>
-    <section>
-        {data.allPosts.map(post => {
-            <article key={post.id}>
-                <h2>{post.title}</h2>
-            </article>
-        })}
-    </section>
-</div>)
+let coverImage = data.page.assets[0]
+return (
+    <div>
+        <section>
+            <h1>{data.page.title}</h1>
+            <Image data={coverImage.responsiveImage} />
+        </section>
+        {/* <section>
+            {data.allPosts.map(post => {
+                <article key={post.id}>
+                    <h2>{post.title}</h2>
+                </article>
+            })}
+        </section> */}
+    </div>
+)
 }
 
 export default HomePage
