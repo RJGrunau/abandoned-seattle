@@ -68,16 +68,7 @@ function HomePage ({data}) {
 let coverImage = data.page.assets[0]
 return (
     <div>
-        <section>
-            <HeroBlock image={coverImage.responsiveImage}/>
-        </section>
-        {/* <section>
-            {data.allPosts.map(post => {
-                <article key={post.id}>
-                    <h2>{post.title}</h2>
-                </article>
-            })}
-        </section> */}
+        <HeroBlock image={coverImage.responsiveImage}/>  
     </div>
 )
 }

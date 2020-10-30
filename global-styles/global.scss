@@ -146,3 +146,20 @@ blockquote{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.hero {
+    width: 100vw;
+    padding: 2em;
+    height: 100vh;
+}
+
+.hero-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.hero-image {
+    grid-column: 1/4;
+    grid-row: 1/4;
+}

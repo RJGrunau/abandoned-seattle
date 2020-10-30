@@ -1,4 +1,4 @@
-import "./heroBlock.module.scss"
+
 import { Image } from 'react-datocms';
 const HeroBlock = ({image}) => {
     return (  
