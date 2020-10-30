@@ -108,7 +108,7 @@ h3 {
     font-family: $headline-font;
     font-weight: 300;
     font-style: italic;
-    color: $light-font-color;
+    color: $dark-font-color;
 }
 
 h3{
@@ -150,20 +150,17 @@ blockquote{
 .hero {
     width: 100vw;
     padding: 2em;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 25px 1fr 25px;
+    min-height: 100vh;
 }
 
 .hero-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    padding: 1em 2em;
-    height: 100vh;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    padding: .75em 2em 1em 2em;
     background-color: #fff;
 }
 
-.hero-image {
-    grid-column: 1/4;
-    grid-row: 1/4;
-    object-fit: cover;
-}

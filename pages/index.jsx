@@ -19,7 +19,7 @@ const HOMEPAGE_QUERY = `
           slug
           date
           coverImage{
-                  responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+                  responsiveImage(imgixParams: { fit: max, w: 300, h: 300, auto: format }) {
                   srcSet
                   webpSrcSet
                   sizes
@@ -64,13 +64,13 @@ export async function getStaticProps(){
         }
     }
 }
-function HomePage ({data}) {
-let coverImage = data.page.assets[0]
-return (
-    <div>
+const HomePage = ({data}) => {
+    let coverImage = data.page.assets[0]
+    return (
+        
         <HeroBlock image={coverImage.responsiveImage}/>  
-    </div>
-)
+        
+    )
 }
 
 export default HomePage
