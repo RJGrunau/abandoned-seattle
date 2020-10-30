@@ -1,6 +1,8 @@
 import {request} from '../libs/datoCms'
-import {Image, renderMetaTags} from 'react-datocms'
+import {renderMetaTags} from 'react-datocms'
 import Head from 'next/head'
+
+import HeroBlock from "../components/index-page/hero-block/heroBlock"
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -67,8 +69,7 @@ let coverImage = data.page.assets[0]
 return (
     <div>
         <section>
-            <h1>{data.page.title}</h1>
-            <Image data={coverImage.responsiveImage} />
+            <HeroBlock image={coverImage.responsiveImage}/>
         </section>
         {/* <section>
             {data.allPosts.map(post => {
