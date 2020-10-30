@@ -1,0 +1,19 @@
+.hero {
+    width: 100vw;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px
+}
+
+.hero-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+
+    .hero-image {
+        grid-column: 1/4;
+        grid-row: 1/4;
+    }
+}
