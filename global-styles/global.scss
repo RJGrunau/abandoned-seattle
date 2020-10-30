@@ -70,7 +70,7 @@ $text-font: delicato serif;
 $code-font: input-mono, monospace;
 
 //colors
-$background-color: rgba( 56, 49, 69,1.0);
+$background-color: rgb(7, 4, 12);
 $alt-background-color: rgba(2,2,2,.85);
 $light-background-color:rgba(170, 151, 201, .78);
 $dark-font-color: rgba(5,1,11,1.0);
@@ -157,9 +157,13 @@ blockquote{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3,1fr);
+    padding: 1em 2em;
+    height: 100vh;
+    background-color: #fff;
 }
 
 .hero-image {
     grid-column: 1/4;
     grid-row: 1/4;
+    object-fit: cover;
 }

@@ -37,7 +37,7 @@ const HOMEPAGE_QUERY = `
           title
           pageText
           assets {
-                  responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+                  responsiveImage(imgixParams: { fit: max, w: 300, h: 300, auto: format }) {
                     srcSet
                     webpSrcSet
                     sizes

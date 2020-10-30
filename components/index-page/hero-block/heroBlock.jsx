@@ -4,7 +4,7 @@ const HeroBlock = ({image}) => {
     return (  
         <section className="hero">
             <div className="wrapper hero-grid">
-                <Image className="hero-image" data={image}/>
+                <Image pictureClassName="hero-image" className="hero-image" data={image} explicitWidth="100%"/>
             </div>
         </section>
     );
