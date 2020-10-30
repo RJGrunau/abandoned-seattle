@@ -1,0 +1,144 @@
+
+// A modified version of Andy Bell's "modern reset" https://github.com/hankchizljaw/modern-css-reset
+
+*,::before,::after {
+    box-sizing: border-box;
+}
+
+// remove default padding and style
+ul[class],
+ol[class] {
+    padding: 0;
+    list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// set root defaults
+html {
+    scroll-behavior: smooth;
+}
+
+//body defaults 
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    
+}
+
+// anchor elements with no class get base styles
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+//easier images
+img {
+    max-width: 100%;
+    display: block;
+}
+
+// inherit fonts for inputs and buttons
+input,button,textarea,select{
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01s !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+//fonts
+$headline-font: allotrope, sans-serif;
+$text-font: delicato serif;
+$code-font: input-mono, monospace;
+
+//colors
+$background-color: rgba( 56, 49, 69,1.0);
+$alt-background-color: rgba(2,2,2,.85);
+$light-background-color:rgba(170, 151, 201, .78);
+$dark-font-color: rgba(5,1,11,1.0);
+$light-font-color: rgba(236,236,236, 0.87);
+$shaded-light-font: rgba(182, 180, 180, 0.87);
+$decoration-color: rgba(242, 246, 25, 1.0);
+
+//sizes
+$base-font-size: 17px;
+
+@mixin highlightText {
+    color: $light-font-color;
+}
+
+@mixin borders {
+    border-top: solid 2px $shaded-light-font;
+}
+
+body {
+    line-height: 1.5;
+    background: $alt-background-color;
+    color: $light-font-color;
+    font-size: $base-font-size;
+}
+
+main {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0.3em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $headline-font;
+    font-weight: 300;
+    font-style: italic;
+    color: $light-font-color;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+a:not([class]){
+    color: $decoration-color;
+}
+
+a[class],
+:visited a[class]{
+    color: $light-font-color;
+}
+
+p {
+    color: $shaded-light-font;
+    font-size: 1.2em;
+}
+
+p[class="primary-text"]{
+    color: $light-font-color;
+}
+
+blockquote{
+    width: 90%;
+    background: $light-font-color;
+    color: $dark-font-color;
+    padding: 1.3em 0.6em;
+    margin: 15px auto;
+}
