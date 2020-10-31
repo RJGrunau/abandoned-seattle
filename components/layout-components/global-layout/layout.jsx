@@ -1,8 +1,8 @@
-import './layout.module.scss';
+import styles from './layout.module.scss';
 
 
 const GlobalLayout = ({children}) => {
-    return ( <div className="main-layout">
+    return ( <div className={styles.mainLayout}>
         <main id="main-content">
             {children}
         </main>

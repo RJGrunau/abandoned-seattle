@@ -3,12 +3,13 @@
 }
 
 .backing {
+    border-radius: 5px;
     padding: 1em 2em;
     display: flex;
     flex-flow: wrap row;
-    background: rgb(7, 4, 12);
+    background: rgb(252, 252, 252);
 }
 
-// .pageText{
-
-// }
+.imageHolder {
+    width: 100%;
+}
