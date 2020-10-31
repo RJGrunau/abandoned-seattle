@@ -1,15 +1,16 @@
 .hero {
-    margin-bottom: 100px;
+    margin-bottom: 0;
 }
 
 .backing {
     border-radius: 5px;
-    padding: 0.5em 2em;
+    padding: 1em 2em 0.5em 2em;
     background: rgb(252, 252, 252);
     display: grid;
     gap: 10px;
     grid-template-rows: 1fr 50px;
     grid-template-columns: 100px repeat(4, 1fr) 100px;
+    box-shadow: inset 3px #000;
 }
 
 .imageHolder {
@@ -37,7 +38,11 @@
     }
 }
 
-@media screen and (max-width: 847px){
+@media screen and (max-width: 833px){
+    .hero {
+        padding: 0.5em;
+    }
+
     .backing{
         padding: 0.5em;
         display: flex;
@@ -47,14 +52,14 @@
     }
 
     .heroText {
-        text-align: center;
-
+        text-align: left;
         h1 {
             font-size: 1.0em;
         }
         span {
             display: block;
             font-size: 0.9em;
+        
         }
     }
 }
