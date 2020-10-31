@@ -1,9 +1,9 @@
 import './layout.module.scss';
 
 
-const GlobalLayout = () => {
+const GlobalLayout = ({children}) => {
     return ( <div className="main-layout">
-        <main>
+        <main id="main-content">
             {children}
         </main>
     </div> );
