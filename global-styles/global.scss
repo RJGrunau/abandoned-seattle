@@ -72,7 +72,7 @@ $code-font: input-mono, monospace;
 //colors
 $background-color: rgb(7, 4, 12);
 $alt-background-color: rgba(2,2,2,.85);
-$light-background-color:rgba(170, 151, 201, .78);
+$light-background-color:rgb(252, 252, 252);
 $dark-font-color: rgba(5,1,11,1.0);
 $light-font-color: rgba(236,236,236, 0.87);
 $shaded-light-font: rgba(182, 180, 180, 0.87);
@@ -91,7 +91,7 @@ $base-font-size: 17px;
 
 body {
     line-height: 1.5;
-    background: $alt-background-color;
+    background: $light-background-color;
     color: $light-font-color;
     font-size: $base-font-size;
 }
@@ -125,7 +125,7 @@ a[class],
 }
 
 p {
-    color: $shaded-light-font;
+    color: $dark-font-color;
     font-size: 1.2em;
 }
 
@@ -143,24 +143,20 @@ blockquote{
 
 .wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .hero {
     width: 100vw;
-    padding: 2em;
-    display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 25px 1fr 25px;
-    min-height: 100vh;
+    padding: 1em;
 }
 
-.hero-grid{
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 2/4;
-    padding: .75em 2em 1em 2em;
-    background-color: #fff;
+.backing {
+    width:100%;
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 1em 2em;
+
 }
 

@@ -1,8 +1,9 @@
 import {request} from '../libs/datoCms'
-import {renderMetaTags} from 'react-datocms'
+// import {renderMetaTags} from 'react-datocms'
 import Head from 'next/head'
 
 import HeroBlock from "../components/index-page/hero-block/heroBlock"
+import GlobalLayout from '../components/layout-components/global-layout/layout'
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -67,8 +68,12 @@ export async function getStaticProps(){
 const HomePage = ({data}) => {
     let coverImage = data.page.assets[0]
     return (
-        
-        <HeroBlock image={coverImage.responsiveImage}/>  
+        <GlobalLayout>
+            <Head>
+                <title>Abandoned Seattle</title>
+            </Head>
+            <HeroBlock image={coverImage.responsiveImage}/>  
+        </GlobalLayout>
         
     )
 }
