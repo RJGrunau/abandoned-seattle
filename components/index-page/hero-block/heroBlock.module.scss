@@ -9,6 +9,10 @@
     display: flex;
     flex-flow: wrap row;
     background: rgb(252, 252, 252);
+
+    div:nth-child(1){
+        justify-self: center;
+    }
 }
 
 .imageHolder {
