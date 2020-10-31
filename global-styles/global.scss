@@ -89,7 +89,7 @@ $base-font-size: 17px;
     border-top: solid 2px $shaded-light-font;
 }
 
-@mixin backingDark {
+.backingDark {
     background: $background-color;
 }
 

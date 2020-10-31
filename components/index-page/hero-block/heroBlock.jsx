@@ -5,7 +5,7 @@ const HeroBlock = ({image}) => {
         <div className="wrapper">
             <section className={styles.hero }>
                 <div className={styles.backing}>
-                    <Image cdata={image} style={{objectFit: "cover"}}/>
+                    <Image data={image} style={{objectFit: "cover"}}/>
                     <div>
                         <h2>Abandoned Seattle:</h2>
                         <p>A photographic essay of Seattle's abandoned buildings before they become appartments</p>

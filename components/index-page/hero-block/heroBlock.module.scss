@@ -6,7 +6,7 @@
     padding: 1em 2em;
     display: flex;
     flex-flow: wrap row;
-    @include backingDark;
+    background: rgb(7, 4, 12);
 }
 
 // .pageText{
