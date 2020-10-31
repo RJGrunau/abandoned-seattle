@@ -89,6 +89,10 @@ $base-font-size: 17px;
     border-top: solid 2px $shaded-light-font;
 }
 
+@mixin backingDark {
+    background: $background-color;
+}
+
 body {
     line-height: 1.5;
     background: $light-background-color;
@@ -96,11 +100,6 @@ body {
     font-size: $base-font-size;
 }
 
-main {
-    width: 100vw;
-    margin: 0 auto;
-    padding: 0.3em;
-}
 
 h1,
 h2,
@@ -143,20 +142,9 @@ blockquote{
 
 .wrapper {
     width: 100%;
-    max-width: 1300px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-.hero {
-    width: 100vw;
-    padding: 1em;
-}
 
-.backing {
-    width:100%;
-    max-width: 960px;
-    margin: 50px auto;
-    padding: 1em 2em;
-
-}
 

@@ -1,0 +1,14 @@
+.hero {
+    padding: 1em;
+}
+
+.backing {
+    padding: 1em 2em;
+    display: flex;
+    flex-flow: wrap row;
+    @include backingDark;
+}
+
+// .pageText{
+
+// }
