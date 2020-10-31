@@ -5,16 +5,33 @@
 
 .backing {
     border-radius: 5px;
-    padding: 1em 2em;
-    display: flex;
+    padding: 0.5em 2em;
     flex-flow: wrap row;
     background: rgb(252, 252, 252);
-
-    div:nth-child(1){
-        justify-self: center;
-    }
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .imageHolder {
-    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/7;
+    justify-self: center;
+    align-self: center;
+}
+
+.heroText{
+    grid-column: 2/3;
+    grid-column: 1/7;
+
+    h2{
+        display: inline;
+        margin: 0;
+    }
+
+    span {
+        padding-left: 5px;
+        font-size: 1.2em;
+        color: rgb(14, 7, 24);
+    }
 }
