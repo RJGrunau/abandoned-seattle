@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import HeroBlock from "../components/index-page/hero-block/heroBlock"
 import GlobalLayout from '../components/layout-components/global-layout/layout'
+import AboutBLock from '../components/index-page/about-block/aboutBlock'
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -67,12 +68,14 @@ export async function getStaticProps(){
 }
 const HomePage = ({data}) => {
     let coverImage = data.page.assets[0]
+    let aboutImage = data.page.assets[1]
     return (
         <GlobalLayout>
             <Head>
                 <title>Abandoned Seattle</title>
             </Head>
             <HeroBlock image={coverImage.responsiveImage}/>  
+            <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
         </GlobalLayout>
         
     )
