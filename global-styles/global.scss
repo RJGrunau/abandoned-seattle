@@ -72,7 +72,7 @@ $code-font: input-mono, monospace;
 //colors
 $background-color: rgb(7, 4, 12);
 $alt-background-color: rgba(2,2,2,.85);
-$light-background-color:rgb(252, 252, 252);
+$light-background-color:rgb(248, 246, 246);
 $dark-font-color: rgba(5,1,11,1.0);
 $secondary-dark-font-color: rgb(14, 7, 24);
 
@@ -93,8 +93,8 @@ $base-font-size: 17px;
 
 body {
     line-height: 1.5;
-    background: $background-color;
-    color: $light-font-color;
+    background: $light-background-color;
+    color: $dark-font-color;
     font-size: $base-font-size;
 }
 
