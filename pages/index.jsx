@@ -1,6 +1,10 @@
 import {request} from '../libs/datoCms'
-import {Image, renderMetaTags} from 'react-datocms'
+// import {renderMetaTags} from 'react-datocms'
 import Head from 'next/head'
+
+import HeroBlock from "../components/index-page/hero-block/heroBlock"
+import GlobalLayout from '../components/layout-components/global-layout/layout'
+import AboutBLock from '../components/index-page/about-block/aboutBlock'
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -17,7 +21,7 @@ const HOMEPAGE_QUERY = `
           slug
           date
           coverImage{
-                  responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+                  responsiveImage(imgixParams: { fit: max, w: 300, h: 300, auto: format }) {
                   srcSet
                   webpSrcSet
                   sizes
@@ -35,7 +39,7 @@ const HOMEPAGE_QUERY = `
           title
           pageText
           assets {
-                  responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+                  responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
                     srcSet
                     webpSrcSet
                     sizes
@@ -62,23 +66,19 @@ export async function getStaticProps(){
         }
     }
 }
-function HomePage ({data}) {
-let coverImage = data.page.assets[0]
-return (
-    <div>
-        <section>
-            <h1>{data.page.title}</h1>
-            <Image data={coverImage.responsiveImage} />
-        </section>
-        {/* <section>
-            {data.allPosts.map(post => {
-                <article key={post.id}>
-                    <h2>{post.title}</h2>
-                </article>
-            })}
-        </section> */}
-    </div>
-)
+const HomePage = ({data}) => {
+    let coverImage = data.page.assets[0]
+    let aboutImage = data.page.assets[1]
+    return (
+        <GlobalLayout>
+            <Head>
+                <title>Abandoned Seattle</title>
+            </Head>
+            <HeroBlock image={coverImage.responsiveImage}/>  
+            <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
+        </GlobalLayout>
+        
+    )
 }
 
 export default HomePage

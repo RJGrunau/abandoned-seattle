@@ -12,11 +12,15 @@
     "react": "^17.0.1",
     "react-datocms": "^1.2.6",
     "react-dom": "^17.0.1",
+    "sass": "^1.28.0",
     "urql": "^1.10.3"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "react-social-icons": "^4.1.0"
   }
 }
