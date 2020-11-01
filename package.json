@@ -19,5 +19,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "react-social-icons": "^4.1.0"
   }
 }
