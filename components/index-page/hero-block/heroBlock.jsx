@@ -9,8 +9,7 @@ const HeroBlock = ({image}) => {
                         <Image data={image} style={{objectFit: "cover"}} explicitWidth="100%"/>
                     </div>
                     <div className={styles.heroText}>
-                        <h2>Abandoned Seattle:</h2>
-                        <span>A photographic essay of Seattle's abandoned buildings before they become appartments</span>
+                        <p>A photographic essay of Seattle's abandoned buildings before they become appartments</p>
                     </div>
                 </div>
             </section>
