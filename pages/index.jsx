@@ -5,6 +5,7 @@ import Head from 'next/head'
 import HeroBlock from "../components/index-page/hero-block/heroBlock"
 import GlobalLayout from '../components/layout-components/global-layout/layout'
 import AboutBLock from '../components/index-page/about-block/aboutBlock'
+import PhotoStream from '../components/photo-stream/photoStream'
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -13,6 +14,22 @@ const HOMEPAGE_QUERY = `
             attributes
             content
             tag
+          }
+        }
+        photoStream {
+          stream {
+            responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
+              srcSet
+              webpSrcSet
+              sizes
+              src
+              width
+              height
+              aspectRatio
+              alt
+              title
+              base64
+            }
           }
         }
         allPosts(first: $limit){
@@ -69,6 +86,8 @@ export async function getStaticProps(){
 const HomePage = ({data}) => {
     let coverImage = data.page.assets[0]
     let aboutImage = data.page.assets[1]
+    let photoStream = data.photoStream
+    
     return (
         <GlobalLayout>
             <Head>
@@ -76,6 +95,7 @@ const HomePage = ({data}) => {
             </Head>
             <HeroBlock image={coverImage.responsiveImage}/>  
             <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
+            <PhotoStream photos={photoStream}/>
         </GlobalLayout>
         
     )
