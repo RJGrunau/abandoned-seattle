@@ -3,17 +3,35 @@ import { request } from '../../libs/datoCms'
 import PhotoCard from './photo-card/photoCard'
 
 
-
-// export async function getStaticProps(){
-//     const data = await request({ 
-//         query: PHOTOSTREAM_QUERY
-//        })
-//     return{
-//         props: {
-//             data
-//         }
-//     }
-// }
+const PHOTOSTREAM_QUERY = `
+    query photoStream{
+        stream{
+            responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
+                          srcSet
+                          webpSrcSet
+                          sizes
+                          src
+                          width
+                          height
+                          aspectRatio
+                          alt
+                          title
+                          base64
+                      
+            }
+          }
+    }
+`
+export async function getStaticProps(){
+    const data = await request({ 
+        query: PHOTOSTREAM_QUERY
+       })
+    return{
+        props: {
+            data
+        }
+    }
+}
 const PhotoStream = ({data}) => {
     console.log(data);
     return ( 
