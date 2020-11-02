@@ -5,7 +5,7 @@ import Head from 'next/head'
 import HeroBlock from "../components/index-page/hero-block/heroBlock"
 import GlobalLayout from '../components/layout-components/global-layout/layout'
 import AboutBLock from '../components/index-page/about-block/aboutBlock'
-import PhotoStream from '../components/photo-stream/photoStream'
+import { Image } from 'react-datocms'
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -96,15 +96,11 @@ const HomePage = ({data}) => {
             <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
             <div className="wrapper">
               {photoStream.map(photo => {
-                <div >
-                <h1>Hello</h1>
-                {/* <div className={styles.imageHolder}>
-                    <Image data={img} alt={alt}/>
+                
+                <div>
+                  <Image data={photo.responsiveImage}/>
                 </div>
-                {/* <div className={styles.caption}>
-                    <p>{caption}</p>
-                </div> */} 
-            </div>
+            
               })}
             </div>
         </GlobalLayout>
