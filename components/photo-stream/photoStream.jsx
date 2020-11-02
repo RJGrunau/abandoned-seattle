@@ -7,26 +7,27 @@ const PHOTOSTREAM_QUERY = `
     query PhotoStream {
         photoStream{
             stream{
-                    responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
-                    srcSet
-                    webpSrcSet
-                    sizes
-                    src
-                    width
-                    height
-                    aspectRatio
-                    alt
-                    title
-                    base64
-                }
+              responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
+                            srcSet
+                            webpSrcSet
+                            sizes
+                            src
+                            width
+                            height
+                            aspectRatio
+                            alt
+                            title
+                            base64
+                        
+              }
             }
-        }
+          }
     }
 `
 
 export async function getStaticProps(){
     const data = await request({ 
-        query: PHOTOSTREAM_QUERY,
+        query: PHOTOSTREAM_QUERY
        })
     return{
         props: {
