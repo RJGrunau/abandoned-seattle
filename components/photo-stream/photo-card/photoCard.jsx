@@ -1,15 +1,17 @@
 import { Image } from 'react-datocms';
 import styles from './photoCard.module.scss'
 
-const PhotoCard = ({img, alt, caption}) => {
+const PhotoCard = ({img}) => {
+    console.log(img);
     return ( 
-        <div className={styles.card}>
-            <div className={styles.imageHolder}>
-                <Image data={img.responsiveImage} alt={alt}/>
+        <div >
+            <h1>Hello</h1>
+            {/* <div className={styles.imageHolder}>
+                <Image data={img} alt={alt}/>
             </div>
-            <div className={styles.caption}>
+            {/* <div className={styles.caption}>
                 <p>{caption}</p>
-            </div>
+            </div> */} 
         </div>
      );
 }

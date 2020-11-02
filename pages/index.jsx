@@ -94,7 +94,19 @@ const HomePage = ({data}) => {
             </Head>
             <HeroBlock image={coverImage.responsiveImage}/>  
             <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
-            <PhotoStream photos={photoStream}/>
+            <div className="wrapper">
+              {photoStream.map(photo => {
+                <div >
+                <h1>Hello</h1>
+                {/* <div className={styles.imageHolder}>
+                    <Image data={img} alt={alt}/>
+                </div>
+                {/* <div className={styles.caption}>
+                    <p>{caption}</p>
+                </div> */} 
+            </div>
+              })}
+            </div>
         </GlobalLayout>
         
     )
