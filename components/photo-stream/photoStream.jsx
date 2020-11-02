@@ -3,20 +3,17 @@ import { request } from '../../libs/datoCms'
 import PhotoCard from './photo-card/photoCard'
 
 
-const PHOTOSTREAM_QUERY = `
-    query 
-`
 
-export async function getStaticProps(){
-    const data = await request({ 
-        query: PHOTOSTREAM_QUERY
-       })
-    return{
-        props: {
-            data
-        }
-    }
-}
+// export async function getStaticProps(){
+//     const data = await request({ 
+//         query: PHOTOSTREAM_QUERY
+//        })
+//     return{
+//         props: {
+//             data
+//         }
+//     }
+// }
 const PhotoStream = ({data}) => {
     console.log(data);
     return ( 
