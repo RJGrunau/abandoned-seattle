@@ -1,3 +1,4 @@
+import PhotoStream from '../../photo-stream/photoStream';
 import GlobalFooter from '../footer/footer';
 import GlobalHeader from '../header/header';
 import styles from './layout.module.scss';
