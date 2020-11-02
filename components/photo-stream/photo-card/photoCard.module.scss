@@ -1,12 +1,17 @@
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 50px;
+    grid-template-rows: 1fr 50px;
+    gap: 10px;
+    margin: 15px auto;
+    padding: 1em;
+    border-radius: 6px;
+    background: rgb(252, 252, 252);
+    flex: 0 0 95%;
 
     .imageHolder {
         grid-column: 1/4;
         grid-row: 1/2;
-        gap: 10px;
     }
 
     .caption {

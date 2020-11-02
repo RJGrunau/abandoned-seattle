@@ -7,8 +7,8 @@ const PhotoStream = ({photos}) => {
     return ( 
         <div className="wrapper">
             <section className={styles.stream}>
-                {photos.map(photo => (
-                    <PhotoCard img={photo}/>
+                {photos.map((photo,i) => (
+                    <PhotoCard key={i} img={photo}/>
                 ))}
             </section>
         </div>

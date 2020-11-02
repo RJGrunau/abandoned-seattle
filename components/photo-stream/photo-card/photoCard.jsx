@@ -4,7 +4,7 @@ import styles from './photoCard.module.scss'
 const PhotoCard = ({img}) => {
 
     return ( 
-        <div className={styles.PhotoCard} >
+        <div className={styles.card} >
             <div className={styles.imageHolder}>
                 <Image data={img.responsiveImage} />
             </div>

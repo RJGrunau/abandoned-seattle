@@ -2,21 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0.5em;
+    margin-top: 25px;
 }
 
-.card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 50px;
-
-    .imageHolder {
-        grid-column: 1/4;
-        grid-row: 1/2;
-        gap: 10px;
-    }
-
-    .caption {
-      grid-column: 1/4;
-      grid-row: 2/3;  
-    }
-}
