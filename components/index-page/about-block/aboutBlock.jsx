@@ -10,7 +10,7 @@ const AboutBLock = ({img, text}) => {
                     <Image data={img} style={{objectFit: "cover"}} explicitWidth="100%"/>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: text }}/>
-                    
+        
             </section>
         </div>
      );

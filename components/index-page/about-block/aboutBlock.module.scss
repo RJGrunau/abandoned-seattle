@@ -10,11 +10,35 @@
     }
 }
 
+@media screen and (min-width: 834px){
+    .aboutSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 200px;
+        gap: 25px;
+        justify-items: center;
+
+        div:first-of-type{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        div:nth-child(2){
+            margin-top: 0;
+            grid-column: 1/3;
+            grid-row: 2/3;
+            font-size: 19px;
+            padding: 0.5em 1em;
+        }
+
+    }
+}
+
 
 @media screen and (min-width: 1194px){
     .aboutSection {
         display: grid;
-        grid-column: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
 
         div:first-of-type {
