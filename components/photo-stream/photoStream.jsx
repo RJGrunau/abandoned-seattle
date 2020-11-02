@@ -4,25 +4,7 @@ import PhotoCard from './photo-card/photoCard'
 
 
 const PHOTOSTREAM_QUERY = `
-    query PhotoStream {
-        photoStream{
-            stream{
-              responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
-                            srcSet
-                            webpSrcSet
-                            sizes
-                            src
-                            width
-                            height
-                            aspectRatio
-                            alt
-                            title
-                            base64
-                        
-              }
-            }
-          }
-    }
+    query 
 `
 
 export async function getStaticProps(){
