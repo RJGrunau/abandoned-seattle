@@ -5,7 +5,7 @@ import Head from 'next/head'
 import HeroBlock from "../components/index-page/hero-block/heroBlock"
 import GlobalLayout from '../components/layout-components/global-layout/layout'
 import AboutBLock from '../components/index-page/about-block/aboutBlock'
-import { Image } from 'react-datocms'
+import PhotoStream from '../components/photo-stream/photoStream'
 
 const HOMEPAGE_QUERY = `
     query HomePage($limit: IntType){
@@ -84,6 +84,7 @@ export async function getStaticProps(){
     }
 }
 const HomePage = ({data}) => {
+    let assets = data.page.assets
     let coverImage = data.page.assets[0]
     let aboutImage = data.page.assets[1]
     let photoStream = data.photoStream.stream
@@ -94,15 +95,7 @@ const HomePage = ({data}) => {
             </Head>
             <HeroBlock image={coverImage.responsiveImage}/>  
             <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
-            <div className="wrapper">
-              {photoStream.map(photo => {
-                
-                <div>
-                  <Image data={photo.responsiveImage}/>
-                </div>
-            
-              })}
-            </div>
+            <PhotoStream photos={photoStream}/>
         </GlobalLayout>
         
     )
