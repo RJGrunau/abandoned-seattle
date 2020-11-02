@@ -5,11 +5,12 @@ const PhotoCard = ({img}) => {
 
     return ( 
         <div className={styles.PhotoCard} >
-            
             <div className={styles.imageHolder}>
                 <Image data={img.responsiveImage} />
             </div>
-            
+            <div className={styles.caption}>
+               <p>{img.responsiveImage.title}</p> 
+            </div>
         </div>
      );
 }
