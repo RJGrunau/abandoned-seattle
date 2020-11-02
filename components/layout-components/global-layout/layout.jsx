@@ -9,7 +9,6 @@ const GlobalLayout = ({children}) => {
         <GlobalHeader/>
         <main id="main-content">
             {children}
-            <PhotoStream/>
         </main>
         <GlobalFooter/>
     </div> );

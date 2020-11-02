@@ -2,13 +2,13 @@ import styles from './photoStream.module.scss'
 import PhotoCard from './photo-card/photoCard'
 
 
-const PhotoStream = ({}) => {
+const PhotoStream = ({photos}) => {
     return ( 
         <div className="wrapper">
             <section className={styles.stream}>
-                {/* {photos.map(photo => {
+                {photos.map(photo => {
                     <PhotoCard img={photo} />
-                })} */}
+                })}
             </section>
         </div>
      );
