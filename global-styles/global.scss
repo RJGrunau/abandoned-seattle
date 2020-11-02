@@ -146,6 +146,10 @@ section {
     background: rgb(252, 252, 252);
 }
 
+section[class] {
+    background: $light-background-color;
+}
+
 img {
     border-radius: 6px;
 }
