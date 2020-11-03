@@ -1,11 +1,10 @@
-const { default: GlobalLayout } = require("../components/layout-components/global-layout/layout")
-
+import GlobalLayout from '../components/layout-components/global-layout/layout'
 import { request } from '../libs/datoCms'
 
 
 const ABOUT_QUERY = `
     query AboutPage{
-        page(filter: {title: {eq: "Abandoned Seattle - Home"}}){
+        page(filter: {title: {eq: "About - Abandoned Seattle"}}){
             title
             pageText
             assets {
