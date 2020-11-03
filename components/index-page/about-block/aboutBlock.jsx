@@ -6,10 +6,12 @@ const AboutBLock = ({img, text}) => {
     return ( 
         <div className="wrapper">
             <section className={styles.aboutSection}>
-                <div>
+                <div className={styles.imageHolder}>
                     <Image data={img} style={{objectFit: "cover"}} explicitWidth="100%"/>
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: text }}/>
+                <div className={styles.pageInfo}>
+                    <p>{text}</p>
+                </div>
         
             </section>
         </div>
