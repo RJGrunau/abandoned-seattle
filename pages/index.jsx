@@ -52,7 +52,7 @@ const HOMEPAGE_QUERY = `
             }
           }
         }
-        page{
+        page(filter: {title: {eq: "Abandoned Seattle - Home"}}){
           title
           pageText
           assets {
@@ -84,6 +84,7 @@ export async function getStaticProps(){
     }
 }
 const HomePage = ({data}) => {
+    
     let coverImage = data.page.assets[0]
     let aboutImage = data.page.assets[1]
     let photoStream = data.photoStream.stream
