@@ -10,11 +10,15 @@
     width: 100%;
     max-width: 1300px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
     h1 {
         font-size: 1.4em;
+    }
+
+    a {
+        display: inline-block;
     }
 }
 @media screen and (min-width: 834px){

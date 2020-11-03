@@ -117,7 +117,7 @@ h3{
 }
 
 a:not([class]){
-    color: $decoration-color;
+    color: $secondary-dark-font-color;
 }
 
 a[class],
@@ -147,7 +147,7 @@ section {
 }
 
 section[class] {
-    background: rgb(252, 252, 252);
+    background: $light-background-color;
 }
 
 img {
