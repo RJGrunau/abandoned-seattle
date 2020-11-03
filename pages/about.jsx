@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ArticleComponent from '../components/articles/articleComponents'
 import GlobalLayout from '../components/layout-components/global-layout/layout'
 import { request } from '../libs/datoCms'
 import markdownToHtml from '../libs/markdownToHTML'
@@ -48,12 +49,7 @@ const AboutPage = ({assets, copy, title}) => {
             <Head>
                 <title>{title}</title>
             </Head>
-            <div className="wrapper">
-                <article>
-                    
-                    <div dangerouslySetInnerHTML={{ __html: copy }}/>
-                </article>
-            </div> 
+            <ArticleComponent asset={assets} title={title} copy={copy}/> 
         </GlobalLayout>
     );
 }
