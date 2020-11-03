@@ -2,12 +2,12 @@
     width: 100%;
     max-width: 960px;
     margin: 50px auto;
+    padding: 1em 0.5em;
     display: grid;
     grid-template-rows: 1fr 50px auto;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-
-
+    font-size: 0.9em;
 }
 
 .imageHolder {
@@ -19,7 +19,7 @@
 
 .titleHolder {
     grid-row: 2/3;
-    grid-column: 1/2;
+    grid-column: 1/4;
     padding: 10px 0;
 }
 
