@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import GlobalLayout from '../components/layout-components/global-layout/layout'
 import { request } from '../libs/datoCms'
 import markdownToHtml from '../libs/markdownToHTML'
@@ -31,17 +32,22 @@ export async function getStaticProps(){
        })
     const assets = data.page.assets[0]
     const copy = await markdownToHtml(data.page.pageText)
+    const title = data.page.title
     return{
         props: {
             assets,
-            copy
+            copy,
+            title
         }
     }
 }
 
-const AboutPage = ({assets, copy}) => {
+const AboutPage = ({assets, copy, title}) => {
     return ( 
         <GlobalLayout>
+            <Head>
+                <title>{title}</title>
+            </Head>
             <div className="wrapper">
                 <article>
                     
