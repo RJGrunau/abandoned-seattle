@@ -1,6 +1,6 @@
 import GlobalLayout from '../components/layout-components/global-layout/layout'
 import { request } from '../libs/datoCms'
-
+import markdownToHtml from '../libs/markdownToHTML'
 
 const ABOUT_QUERY = `
     query AboutPage{
@@ -19,7 +19,7 @@ const ABOUT_QUERY = `
                     alt
                     title
                     base64
-              }
+            }
         }
     }
 }
@@ -29,20 +29,23 @@ export async function getStaticProps(){
         query: ABOUT_QUERY,
         variables: {limit: 1}
        })
+    const assets = data.page.assets[0]
+    const copy = await markdownToHtml(data.page.pageText)
     return{
         props: {
-            data
+            assets,
+            copy
         }
     }
 }
 
-const AboutPage = ({data}) => {
+const AboutPage = ({assets, copy}) => {
     return ( 
         <GlobalLayout>
             <div className="wrapper">
                 <article>
-                    <h1>{data.page.title}</h1>
-                    about
+                    
+                    <div dangerouslySetInnerHTML={{ __html: copy }}/>
                 </article>
             </div> 
         </GlobalLayout>
