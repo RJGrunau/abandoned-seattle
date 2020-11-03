@@ -27,3 +27,9 @@
     grid-row: 3/4;
     grid-column: 1/4;
 }
+
+@media screen and (min-width: 1194px) {
+    .titleHolder{
+        grid-column: 1/2;
+    }
+}
