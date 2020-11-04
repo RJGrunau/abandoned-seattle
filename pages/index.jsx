@@ -1,4 +1,6 @@
 import {request} from '../libs/datoCms'
+import markdownToHtml from '../libs/markdownToHTML'
+
 // import {renderMetaTags} from 'react-datocms'
 import Head from 'next/head'
 
@@ -52,7 +54,7 @@ const HOMEPAGE_QUERY = `
             }
           }
         }
-        page{
+        page(filter: {title: {eq: "Abandoned Seattle - Home"}}){
           title
           pageText
           assets {
@@ -77,24 +79,27 @@ export async function getStaticProps(){
         query: HOMEPAGE_QUERY,
         variables: {limit: 1}
        })
+      const text = await markdownToHtml(data.page.pageText)
     return{
         props: {
-            data
+            data,
+            text
         }
     }
 }
-const HomePage = ({data}) => {
-    let assets = data.page.assets
+const HomePage = ({data, text}) => {
+    
     let coverImage = data.page.assets[0]
     let aboutImage = data.page.assets[1]
     let photoStream = data.photoStream.stream
+    let copy = text
     return (
         <GlobalLayout>
             <Head>
                 <title>Abandoned Seattle</title>
             </Head>
             <HeroBlock image={coverImage.responsiveImage}/>  
-            <AboutBLock img={aboutImage.responsiveImage} text={data.page.pageText}/>
+            <AboutBLock img={aboutImage.responsiveImage} text={copy}/>
             <PhotoStream photos={photoStream}/>
         </GlobalLayout>
         
