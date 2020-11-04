@@ -9,9 +9,8 @@ const AboutBLock = ({img, text}) => {
                 <div className={styles.imageHolder}>
                     <Image data={img} style={{objectFit: "cover"}} explicitWidth="100%"/>
                 </div>
-                <div className={styles.pageInfo}>
-                    <p>{text}</p>
-                </div>
+                <div className={styles.pageInfo} dangerouslySetInnerHTML={{__html: text}}/>
+                    
         
             </section>
         </div>
