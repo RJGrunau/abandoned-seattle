@@ -2,7 +2,6 @@ import styles from './articleComponent.module.scss'
 import {Image} from 'react-datocms'
 
 const ArticleComponent = ({asset, title, copy}) => {
-    console.log(asset);
     return ( 
         <div className="wrapper">
             <article className={styles.article}>
