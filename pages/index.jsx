@@ -93,7 +93,6 @@ const HomePage = ({data, text}) => {
     let aboutImage = data.page.assets[1]
     let photoStream = data.photoStream.stream
     let copy = text
-    console.log(copy);
     return (
         <GlobalLayout>
             <Head>
