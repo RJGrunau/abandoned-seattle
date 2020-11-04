@@ -132,9 +132,10 @@ a[class],
 }
 
 p {
-    color: $dark-font-color;
-    font-size: 1.2em;
+    color: $secondary-dark-font-color;
+    font-size: 0.9em;
     font-family: $text-font;
+
 }
 
 p[class="primary-text"]{
