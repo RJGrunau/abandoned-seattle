@@ -8,8 +8,15 @@
         padding: 0.5em;
         max-width: 1300px;
         display: flex;
-        flex-flow: wrap row;
+        flex-flow: wrap column;
         align-items: center;
         justify-content: center;
+    }
+
+    .copywrite {
+
+        p{
+            font-size: 0.8em;
+        }
     }
 }
