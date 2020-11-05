@@ -6,7 +6,13 @@ const GlobalHeader = () => {
     return ( 
         <header className={styles.header}>
             <div className={styles.headerContainer}>
-                <h1>Abandoned Seattle</h1>
+                <div>
+                    <Link href="/">
+                        <a>
+                            <h1>Abandoned Seattle</h1>
+                        </a>
+                    </Link>
+                </div>
                 <SiteNav/>
             </div>
         </header>
