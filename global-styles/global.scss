@@ -105,7 +105,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4{
     font-family: $headline-font;
     font-weight: 300;
     font-style: italic;
@@ -114,6 +115,11 @@ h3 {
 
 h3{
     font-size: 1.2em;
+}
+
+a {
+    font-family: $headline-font;
+    font-style: italic;
 }
 
 a:not([class]){
@@ -126,8 +132,10 @@ a[class],
 }
 
 p {
-    color: $dark-font-color;
-    font-size: 1.2em;
+    color: $secondary-dark-font-color;
+    font-size: 0.9em;
+    font-family: $text-font;
+
 }
 
 p[class="primary-text"]{
