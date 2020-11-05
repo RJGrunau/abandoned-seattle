@@ -1,6 +1,8 @@
+import GalleryComponent from "../components/gallery-components/gallery-component/galleryComponent";
+
 const GalleryPage = () => {
     return ( 
-        <div>hi</div>
+        <GalleryComponent/>
      );
 }
  
