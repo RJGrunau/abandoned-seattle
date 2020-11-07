@@ -25,13 +25,9 @@ const GALLERY_QUERY = `
 `
 
 const GalleryPage = ({data}) => {
-    const [gallery, setGallery] = useState(null);
-
-    useEffect(() => {
-        const photos = data.photoStream.stream
-
-        setGallery({gallery: photos})
-    }, [])
+    
+    const gallery = data.photoStream.stream
+    
     return ( 
         <GlobalLayout>
             <GalleryComponent gallery={gallery}/>
