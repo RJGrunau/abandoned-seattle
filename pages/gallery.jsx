@@ -3,10 +3,11 @@ import React, {useEffect, useState} from 'react'
 import GalleryComponent from "../components/gallery-components/gallery-component/galleryComponent";
 import GlobalLayout from "../components/layout-components/global-layout/layout";
 
-const GALLERY_QUERY = `
+const GALLERYPAGE_QUERY = `
     query GalleryPage{
-        photoStream {
-            stream {
+        page(filter: {title: {eq: "Gallery"}}){
+            title
+            assets {
                 responsiveImage(imgixParams: { fit: max, w: 960, h: 672, auto: format }) {
                 srcSet
                 webpSrcSet
@@ -18,26 +19,25 @@ const GALLERY_QUERY = `
                 alt
                 title
                 base64
-              }
             }
         }
     }
+}
 `
 
 const GalleryPage = ({data}) => {
-    
-    const gallery = data.photoStream.stream
-    
+    const title = data.page.title;
+    const assets = data.page.assets
     return ( 
         <GlobalLayout>
-            <GalleryComponent gallery={gallery}/>
+            <GalleryComponent title={title} assets={assets}/>
         </GlobalLayout>
      );
 }
  
 export async function getStaticProps(){
     const data = await request({
-        query: GALLERY_QUERY
+        query: GALLERYPAGE_QUERY
     })
 
     return {
