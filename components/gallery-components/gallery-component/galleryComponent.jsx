@@ -1,16 +1,14 @@
 import styles from './galleryComponent.module.scss'
 import GalleryPicture from '../gallery-picture/galleryPictureComponent'
+import {Image} from 'react-datocms'
 
 const GalleryComponent = ({gallery}) => {
     
     return ( 
         <div className={styles.galleryWrapper}>
             <section className={styles.galleryContainer}>
-                {
-                    gallery.map((pic, i) => {
-                        <GalleryPicture img={pic}/>
-                    })
-                }
+                hi
+                
             </section>
         </div>
      );
