@@ -10,7 +10,6 @@ const GalleryComponent = ({title,assets}) => {
             <section className={styles.galleryContainer}>
                 {
                     assets.map(img => (
-
                         <GalleryPicture img={img} />
                     ))
                 }
