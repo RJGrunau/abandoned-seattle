@@ -6,11 +6,11 @@ const SiteNav = () => {
     return ( 
         <nav className={styles.nav} role="main navigation">
             <ul className={styles.navList}>
-                {/* <li>
-                    <Link href="/">
-                        <a>Home</a>
+                <li>
+                    <Link href="/gallery">
+                        <a>Gallery</a>
                     </Link>
-                </li> */}
+                </li>
                 <li>
                     <Link href="/about">
                         <a>About</a>
