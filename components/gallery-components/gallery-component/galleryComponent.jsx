@@ -9,10 +9,10 @@ const GalleryComponent = ({title,assets}) => {
                 <h1>{title}</h1>
             <section className={styles.galleryContainer}>
                 {
-                    assets.map(img => {
+                    assets.map(img => (
 
                         <GalleryPicture img={img} />
-                    })
+                    ))
                 }
             </section>
         </div>
