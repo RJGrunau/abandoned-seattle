@@ -1,5 +1,5 @@
 import styles from './galleryPicture.module.scss'
-import {Image} from 'react-datocms'
+import { Image } from 'react-datocms';
 
 const GalleryPicture = ({img}) => {
     return ( 
