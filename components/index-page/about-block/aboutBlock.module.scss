@@ -4,7 +4,7 @@
     padding: 1.4em 0.5em;
     display: flex;
     flex-flow: wrap row;
-
+    background: #fff;
     
 }
 
@@ -15,6 +15,7 @@
         grid-template-rows: 1fr 250px;
         gap: 25px;
         justify-items: center;
+        
 
         .imageHolder{
             grid-column: 1/3;
