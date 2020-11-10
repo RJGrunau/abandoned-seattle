@@ -8,7 +8,7 @@ const GlobalHeader = () => {
             <div className={styles.headerContainer}>
                 <div>
                     <Link href="/">
-                        <a>
+                        <a aria-label="Abandoned Seattle">
                             <h1>Abandoned Seattle</h1>
                         </a>
                     </Link>
