@@ -12,7 +12,7 @@ const PhotoStream = ({photos}) => {
                     ))}
                 </div>
                 <div className={styles.moreButton}>
-                    <Link href="/gallery">
+                    <Link aria-label="link to gallery page" href="/gallery">
                         <a>
                             More of Abandoned Seattle
                         </a>
