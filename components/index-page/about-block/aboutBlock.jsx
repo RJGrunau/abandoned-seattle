@@ -10,7 +10,7 @@ const AboutBLock = ({img, text}) => {
                     <Image data={img} style={{objectFit: "cover"}} explicitWidth="100%"/>
                 </div>
                 <div className={styles.pageInfo}>
-                    <div className={styles.pageInfo} dangerouslySetInnerHTML={{__html: text}}/>
+                    <div tabIndex="0" className={styles.pageInfo} dangerouslySetInnerHTML={{__html: text}}/>
                     <div style={{marginTop: "10px"}}>
                         <SocialComponent/>
                     </div>
