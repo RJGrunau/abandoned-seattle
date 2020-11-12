@@ -8,10 +8,10 @@ const ArticleComponent = ({asset, title, copy}) => {
                 <div className={styles.imageHolder}>
                     <Image data={asset.responsiveImage} style={{objectFit: "cover"}} explicitWidth="100%"/>
                 </div>
-                <div className={styles.titleHolder}>
+                <div tabindex="0" className={styles.titleHolder}>
                     <h1>{title}</h1>
                 </div>
-                <div className={styles.bodyCopy} dangerouslySetInnerHTML={{__html: copy}}/>
+                <div tabIndex="0" className={styles.bodyCopy} dangerouslySetInnerHTML={{__html: copy}}/>
             </article>
         </div>
     );

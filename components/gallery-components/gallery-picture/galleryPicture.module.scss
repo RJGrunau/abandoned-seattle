@@ -1,3 +1,19 @@
 .picture {
    margin: 15px 0;
+   padding: 1em 0.4em;
+   display: grid;
+   gap: 10px;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 50px;
+   color: #fff;
+
+   .img {
+      grid-column: 1/3;
+      grid-row: 1/2;
+   }
+   .text {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      text-align: center;
+   }
 }
