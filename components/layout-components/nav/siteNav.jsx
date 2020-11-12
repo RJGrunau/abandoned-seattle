@@ -7,12 +7,12 @@ const SiteNav = () => {
         <nav className={styles.nav} role="main navigation">
             <ul className={styles.navList}>
                 <li>
-                    <Link href="/gallery">
+                    <Link aria-label="link to gallery page" href="/gallery">
                         <a>Gallery</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/about">
+                    <Link aria-label="link to about page" href="/about">
                         <a>About</a>
                     </Link>
                 </li>
